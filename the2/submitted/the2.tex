@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{comment}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Deniz Koluaçık \\
+Id Number : 2310274 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\begin{enumerate}[label=\textbf{\alph*)}]
+	\item $ $
+		\begin{enumerate}[label=(\roman*)]
+			\item $D = A \cap (B \cup C)$
+			\item $E = (A \cap B) \cup C$
+			\item $F = (A \cap \overline{B})\cup(A\cap B\cap C)$
+
+		\end{enumerate}
+	\item $ $
+	\begin{enumerate}[label=(\roman*)]
+		\item Notice that the set $(A \times B) \times C$ consists of elements in the format $((a_i,b_i),ci)$ where $a_i \in A,\ b_i \in B,\ $and$\ c_i \in C$, meanwhile the set $A\times (B\times C)$ consists of elements in the format $(a_i, (b_i, c_i))$.\\
+
+			Let us assume $A = \{1\},\ B=\{1\},\ $and $C=\{1\}$.\\
+			$(A\times B)\times C = \{ ((1,1),1)\}$ and $A\times(B\times C)=\{(1,(1,1))\}$.\\
+			Since $((1,1),1) \notin A\times(B \times C)$, we can say that $(A\times B)\times C \neq A\times(B\times C)$\\
+	\item We can show that the two given expressions are equivalent by using a membership table.\\
+
+
+		\begin{tabular}{*7{l}}
+			\toprule
+			$A$ & $B$ & $C$  & $A\cap B$ & $B\cap C$ & $(A\cap B)\cap C$ & $A\cap(B\cap C)$\\
+			\midrule
+			1 & 1 & 1 & 1 & 1 & 1 & 1\\
+			1 & 1 & 0 & 1 & 0 & 0 & 0\\
+			1 & 0 & 1 & 0 & 0 & 0 & 0\\
+			1 & 0 & 0 & 0 & 0 & 0 & 0\\
+			0 & 1 & 1 & 0 & 1 & 0 & 0\\
+			0 & 1 & 0 & 0 & 0 & 0 & 0\\
+			0 & 0 & 1 & 0 & 0 & 0 & 0\\
+			0 & 0 & 0 & 0 & 0 & 0 & 0\\
+			\bottomrule
+
+		\end{tabular}\\
+
+		We have shown that for all x the expressions on the last two columns have the same value.\newpage
+	\item We will use the same approach here.\\
+
+		\begin{tabular}{*7{l}}
+			\toprule
+			$A$ & $B$ & $C$  & $A\oplus B$ & $B\oplus C$ & $(A\oplus B)\oplus C$ & $A\oplus(B\oplus C)$\\
+			\midrule
+			1 & 1 & 1 & 0 & 0 & 1 & 1\\
+			1 & 1 & 0 & 0 & 1 & 0 & 0\\
+			1 & 0 & 1 & 1 & 1 & 0 & 0\\
+			1 & 0 & 0 & 1 & 0 & 1 & 1\\
+			0 & 1 & 1 & 1 & 0 & 0 & 0\\
+			0 & 1 & 0 & 1 & 1 & 1 & 1\\
+			0 & 0 & 1 & 0 & 1 & 1 & 1\\
+			0 & 0 & 0 & 0 & 0 & 0 & 0\\
+			\bottomrule
+		\end{tabular}\\
+
+		We have shown that for all x the expressions on the last two columns have the same value.
+	\end{enumerate}
+	
+\end{enumerate}
+
+
+\section*{Answer 2}
+\begin{enumerate}[label=\textbf{\alph*)}]
+	\item Let our domain of discourse be $A$.\\
+		$f^{-1}(f(A_0)) = \{x| \exists y \in A_0(f(x) = f(y))$\\
+		$\forall x(x\in A_0 \rightarrow \exists y \in A_0 (f(x) = f(y))$\\
+		$\forall x(x\in A_0 \rightarrow x \in f^{-1}(f(A_0)) $\\
+		Hence, $A_0 \subseteq f^{-1}(f(A_0))$.\\
+
+		If $f$ is injective, or in other words, $\forall x \forall y(f(x) = f(y) \rightarrow x = y)$, we can say that
+		\[\forall x(\exists y\in A_0 (f(x) = f(y) \rightarrow x = y \rightarrow x \in A_0))\]
+		\[\forall x(x\in f^{-1}(f(A_0)) \rightarrow x \in A_0)\]
+		\[f^{-1}(f(A_0)) \subseteq\ A_0\]
+		Since $A_0 \subseteq f^{-1}(f(A_0))$ and $f^{-1}(f(A_0)) \subseteq A_0$, we can conclude by saying $A_0 = f^{-1}(f(A_0))$ if $f$ is injective.\\
+	
+	\item %Let our domain of discourse be $B$.\\
+		$f(f^-1(B_0)) = \{f(a) | a\in A\ \exists b \in B_0 (f(a) = b)\}$\\
+		Since all elements of $f(f^-1(B_0))$ are in $B_0$ ($f(a) = b \rightarrow f(a) \in B_0$), we can say that \[f(f^{-1}(B_0)) \subseteq B_0\]
+		
+		If $f$ is surjective, then it is not the case that there exists an $b \in B_0$ such that $f^{-1}(b) = \emptyset$, or in other words, there is always some $a \in A$ such that the function $f$ maps that $a$ to $b$ for any $b \in B_0$. Based on this, we can construct the claims,
+		\[ \forall b\in B_0\ \exists a\in A(f^{-1}(b) = a \neq \emptyset)\]
+		and finally,
+		\[ \forall b\in B_0\ \exists a\in A(f(f^{-1}(b)) = b)\]
+		Hence,
+		\[B_0\subseteq f(f^{-1}(B_0)) \]
+		Since $B_0\subseteq f(f^{-1}(B_0))$ and $f(f^{-1}(B_0)) \subseteq B_0$, we can finally say $B_0 = f(f^{-1}(B_0))$ if $F$ is surjective.\\
+\end{enumerate}
+		
+
+
+\section*{Answer 3}
+		If $A$ is countable, then we can define a new set $B \subseteq \mathbb{Z^+}$ such that $|B| = |A|$. We can define a function $g:B \rightarrow A$ so that $g$ is bijective since $|A| = |B|$.\\ 
+		Based on this, we can define another function $f:\mathbb{Z^+} \rightarrow A$, 
+		\begin{equation*}
+			f(x) = \begin{cases}
+				g(x) & \text{if $x \in B$}\\
+				a & \text{if $x \notin B$}\\
+			\end{cases}
+		\end{equation*}
+		where $a$ can be any element of the set $A$.\\
+		The function $f$ is surjective, since $\forall a\in A\ \exists b\in B(f(b) = a)$ by the way we defined the function $g$.\\
+		Therefore (i) $\rightarrow$ (ii).\\
+
+
+		We can apply the same reasoning we used while defining the functions $f$ and $g$ in reverse. If there exists a function $f$ that is surjective. We can find a set $B \subseteq \mathbb{Z^+}$ such that all elemets of $B$ are mapped to a distinct element of $A$ and it is not the case that there exists an element of $A$ such that no element of $B$ is mapped to that element of $A$, or formally:
+		\[ \forall b\in B\ \forall a\in B\ (f(a) = f(b) \rightarrow a = b) \land \forall a\in A\ \exists b\in B\ (f(b)=a)\]
+		We can redefine $f$ with this restricted domain as $g: B \rightarrow A$. Notice that the function $g$ is no different than the one we previously defined, and $g$ is bijective, again. We can say since there exists a bijective function $g$, we can take the inverse of this bijective function $g^{-1}:A \rightarrow B$, which is also bijective. Finally by extending the codomain of our function $g^{-1}$ to $\mathbb{Z^+}$ we find a new function $f_1:A \rightarrow\mathbb{Z^+}$ that might be no longer surjective but is injective, nonetheless.\\
+		Therefore, (ii) $\rightarrow$ (iii).\\
+		
+		For the last step, suppose that $A$ is uncountable. If it is uncountable then $|A| > |\mathbb{Z^+}|$ since $\mathbb{Z^+}$ is countable. But since there exists a injective function from $A$ to $\mathbb{Z^+}$, the cardinality of $A$ must be less than $\mathbb{Z^+}$ \textit{(see definition 2 on page 170 of the textbook)}. We reach a contradiction here. Therefore, $A$ is countable.
+		Therefore, (iii) $\rightarrow$ (i).\\
+
+		Finally, by showing (i) $\rightarrow$ (ii) $\rightarrow$ (iii) $\rightarrow$ (i), we have reached the conclusion (i), (ii), and (iii) are equivalent.
+			
+	
+\begin{comment}
+
+
+
+
+We show that (i) $\rightarrow$ (ii) $\rightarrow$ (iii) $\rightarrow$ (i).
+
+$A$ is countable if and only if it has the same cardinality as $\mathbb{N}$, which is $\aleph_0$, and there is a one-to-one correspondance (or a bijection) between $A$ and $\mathbb{N}$.\\
+We can say that there exists a function $f: \mathbb{N} \rightarrow A$ such that\\
+$\forall x\in \mathbb{N}\ \forall y\in \mathbb{N} ((f(x) = f(y)) \rightarrow x=y) \land \forall z\in A\ \exists t\in \mathbb{N} f(t) = y$ if $A$ is countable.
+Notice that 
+
+If $A$ is countable, then we can find an enumeration such that each $n_i \in \mathbb{Z^+}$ corresponds to a $m_i \in A$. Therefore we have a bijective function $g:\mathbb{Z^+} \rightarrow A$. We can have a bijective function $g$ only if there exists a surjective function $f_1:\mathbb{Z^+} \rightarrow A$. Therefore, if (i) is true, then (ii) has to be true. ((i) $\rightarrow$ (ii)).\\ 
+If there exists a $f_1 : \mathbb{Z^+} \rightarrow A$, 
+\end{comment}
+
+
+\section*{Answer 4}
+\begin{enumerate}[label=\textbf{\alph*)}]
+	\item If we can find a method of enumeration for finite binary strings, then we can say that the set of finite strings is countable.\\
+	We can find a such enumeration, and that would be:\\
+		\begin{enumerate}[label=\arabic*-]
+		\item 0
+		\item 1
+		\item 00
+		\item 01
+		\item 10
+		\item 11
+		\item 000\\
+		\vdots
+	\end{enumerate}
+		In this enumeration we enumerate each binary string according to their length and the integral value they represent (such as $(100)_2 = 4$) in an increasing order. An algorithm for finding the order of any finite string would be:
+		\begin{equation*}
+			\sum_{n=1}^{q(x)-1} 2^n + f(x)
+		\end{equation*}
+		Where $q(x)$ is the function that maps any finite binary string to its length and $f(x)$ is the function that maps any finite binary string to the integral value that it represents. For example, the order of the string $01010$ in this enumeration would be:\\
+		\begin{equation*}
+			\sum_{n=1}^{4} 2^n + 10 = 2 + 4 + 8 + 16 + 10 = 40
+		\end{equation*}
+		Hence, the set of finite binary strings is countable.
+	\item We will use the \textbf{\textit{Cantor diagonalization argument}} to show that there is no enumeration for the set of infinite binary strings, and therefore, that it is uncountable.\\
+
+	We begin with the assumption such enumeration exists. This enumeration would look like this:\\
+	\begin{enumerate}[label=\arabic*-]
+		\item $b_{11}b_{12}b_{13}b_{14}b_{15}b_{16}b_{16}\mathellipsis$
+		\item $b_{21}b_{22}b_{23}b_{24}b_{25}b_{26}b_{26}\mathellipsis$
+		\item $b_{31}b_{32}b_{33}b_{34}b_{35}b_{36}b_{36}\mathellipsis$
+		\item $b_{41}b_{42}b_{43}b_{44}b_{45}b_{46}b_{46}\mathellipsis$\\
+			\vdots
+
+	\end{enumerate}
+		Where $b_{nm}$ is the $m^{th}$ leftmost \textit{bit} of the $n^{th}$ string.\\
+		We can construct an infinite binary string $d = d_1d_2d_3d_4d_5d_6d\mathellipsis$ following this rule.\\
+
+		\[ d_i = \begin{cases}
+			1 & \text{if $b_{ii} = 0$} \\
+			0 & \text{if $b_{ii} = 1$} \\
+		\end{cases}
+		\]
+
+		Which inherently does not appear anywhere in this enumeration. Since for any attempted enumeration we can construct a such $d$, we reach a contradiction with our initial assumption. Therefore, the set of the infinite binary strings is uncountable.
+		
+
+
+		
+		
+
+\end{enumerate}
+
+\newpage
+\section*{Answer 5}
+\begin{enumerate}[label=\textbf{\alph*)}]
+	\item $\log n! = \Theta(n\log n) \leftrightarrow (\log n! = 
+		\Omega(n\log n)) \land (\log n! = O(n\log n))$
+	\begin{itemize}
+	\item $\log n! \stackrel{?}{=} O(n\log n)$\\
+
+		We try to show that $\forall n > k_1 \log n! < c_1 \times n\log n$ for some $c_1$ and $k_1$.\\
+		Let $c_1 = 1,\ k_1 = 10$.\\ 
+		\begin{align*}
+			\log n! &= \log (n \times (n-1) \times (n-2) \times \mathellipsis \times 2 \times 1) \\
+			&= \log n + \log (n-1) + \log (n-2) + \mathellipsis + \log2 + \log1\\
+			&< \underbrace{\log n + \mathellipsis + \log n}_{\text{n times}}=\log n^n= n\log n\qquad \forall n>10\\
+		\end{align*}
+			Therefore, $\log n! = O(n\log n).$\\
+	\item $\log n! \stackrel{?}{=} \Omega(n\log n)$\\
+
+		Now we will use a similar approach to find a pair of $c_2$ and $k_2$.\\
+
+		\begin{align*}
+			\log n! &= \log (n \times (n-1) \times (n-2) \times \mathellipsis \times 2 \times 1) \\
+			&= \log n + \log (n-1) + \log (n-2) + \mathellipsis + \log2 + \log1\\
+			&> \underbrace{\log\frac{n}{2} + \log\left(\frac{n}{2}+1\right) + \mathellipsis + \log(n-1) + \log n}_{\frac{n}{2}+1 \text{ times}}\\
+			\log\frac{n}{2} + \log\left(\frac{n}{2}+1\right) + \mathellipsis + \log(n-1) + \log n &>  \underbrace{\log\frac{n}{2}+\mathellipsis+\log\frac{n}{2}}_{\frac{n}{2} \text{ times}} = \frac{n}{2}\log\frac{n}{2} = \frac{n}{2}(\log n - \log2)\\
+			\frac{n}{2}(\log n - \log2) &= \Omega(n\log n)\qquad \text{ for $c_2 = 1/2$ and $k_2 = 10$.}\\
+			\log n! &= \Omega(n\log n)
+		\end{align*}
+
+	\end{itemize}
+		Finally, since $\log n! = \Omega(n\log n)$ and $\log n! = O(n\log n)$, we can conclude by saying $\log n! = \Theta(n\log n)$.\\
+		\newpage
+	\item Let $x_n$ and $y_n$ be the ratio between the $n^{th}$ and $(n+1)^{th}$ elements of the sequences $\{n!\}$ and $\{2^n\}$, respectively. By examining the ratio $\frac{x_n}{y_n}$ as $n$ approaches infinity, we can find which function grows faster.\\
+		\[x_n = \frac{(n+1)!}{n!}\ ,\quad y_n = \frac{2^{n+1}}{2^n}\]
+
+		\begin{equation*}
+			\lim_{n \to \infty}{\frac{\frac{(n+1)!}{n!}}{\frac{2^{n+1}}{2^n}}}= \lim_{n \to \infty}{\frac{n+1}{2}}=\infty\\
+		\end{equation*}
+		What we have concluded from here is that the ratio between the $x_n$ and $y_n$ approaches to infinity as $n$ itself approaches to infinity. Hence, the sequence $\{n!\}$ increases faster than $\{2^n\}$, or in other words, the function $n!$ increases faster than the function $2^n$.
+\end{enumerate}
+
+\end{document}

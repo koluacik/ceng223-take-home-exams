@@ -1,0 +1,296 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+\usepackage{fitch}
+\usepackage{enumitem}
+\usepackage{hhline}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Deniz KOLUAÇIK \\
+Id Number : 2310274 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+
+\begin{enumerate}[label=\textbf{\alph*)}]
+	\item $ $
+		\begin{table}[H]
+		\centering	
+		\begin{tabular}{||c|c|c|c|c|c||}
+			\hhline{|t:=:=:=:=:=:=:t|}
+			\textbf{$p$} & \textbf{$q$}  & \textbf{$\neg p$} & \textbf{$q\rightarrow\neg p$} & \textbf{$p\leftrightarrow q$} & \textbf{$(q\rightarrow\neg p)\leftrightarrow (p\leftrightarrow q)$} \\
+			\hhline{|:=:=:=:=:=:=:|}
+			T & T & F & F & T & F\\
+			\hhline{||-|-|-|-|-|-||}
+			T & F & F & T & F & F\\
+			\hhline{||-|-|-|-|-|-||}
+			F & T & T & T & F & F\\
+			\hhline{||-|-|-|-|-|-||}
+			F & F & T & T & T & T\\
+			\hhline{|b:=:=:=:=:=:=:b|}
+		\end{tabular}
+			\caption{The truth table of the given compound proposition.}
+			\end{table}
+	\item $ $
+		\begin{table}[H]
+		\centering
+		\begin{tabular}{||c|c|c|c|c|c|c|c||}
+			\hhline{|t:=:=:=:=:=:=:=:=:t|}
+			\textbf{$p$} & \textbf{$q$} & \textbf{$r$} &
+			\textbf{$p\lor q$} & \textbf{$p\rightarrow r$} &
+			\textbf{$q\rightarrow r$} &
+			\textbf{$(p\lor q)\land(p\rightarrow r)\land(q\rightarrow r)$} &
+			\textbf{$((p\lor q)\land(p\rightarrow r)\land(q\rightarrow r)\rightarrow r)$}\\
+			\hhline{|:=:=:=:=:=:=:=:=:|}
+			T & T & T & T & T & T & T & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			T & T & F & T & F & F & F & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			T & F & T & T & T & T & T & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			T & F & F & T & F & T & F & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			F & T & T & T & T & T & F & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			F & T & F & T & T & F & F & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			F & F & T & F & T & T & F & T\\
+			\hhline{||-|-|-|-|-|-|-|-||}
+			F & F & F & F & T & T & F & T\\
+			\hhline{|b:=:=:=:=:=:=:=:=:b|}
+			
+		\end{tabular}
+			\caption{The truth table for the given formula, where the expression on the last column holds true for any value of $x$, $y$, and $z$, showing us that the formula is a \textbf{tautology}.}
+			
+		\end{table}
+	
+\end{enumerate}
+
+
+
+\section*{Answer 2}
+
+%\begin{table}[H]
+	%\centering
+	%\begin{tabular}{lcl}
+		%\\
+		%1 & $\neg p \rightarrow (q \rightarrow r)$ & \\
+		%2 & $\neg(\neg p) \lor (q \rightarrow r)$ & \textit{Table 7, Line 1}\\
+		%3 & $p \lor (q \rightarrow r)$ & \textit{Double negation law}\\
+		%4 & $p \lor (\neg q \lor r)$ & \textit{Table 7, Line 1}\\
+		%5 & $(p \lor \neg q) \lor r$ & \textit{Associative law}\\
+		%6 & $(\neg q \lor p ) \lor r$ & \textit{Commutative law}\\
+		%7 & $\neg q \lor( p \lor r)$ & \textit{Associative law}\\
+		%8 & $\neg(\neg q) \rightarrow( p \lor r)$ & \textit{Table 7, Line 3}\\
+		%9  & $q \rightarrow( p \lor r)$ & \textit{Double negation law}\\
+%
+	%\end{tabular}
+	%\caption{$\neg p \rightarrow (q\rightarrow r)$ is logically
+	%equivalent to $q\rightarrow (p\land r)$.}
+	%
+	%
+%\end{table}
+ %
+%\begin{align*}
+	%%$\neg p \rightarrow (q \rightarrow r)$
+	%a &= 3+5\\
+	%a &= 3+5
+%\end{align*}
+
+\begin{align*}
+		\neg p \rightarrow (q \rightarrow r)  &\equiv \neg(\neg p) \lor (q \rightarrow r) & \textit{Table 7, Line 1}\\
+		&\equiv p \lor (q \rightarrow r) & \textit{Double negation law}\\
+		&\equiv p \lor (\neg q \lor r) & \textit{Table 7, Line 1}\\
+		&\equiv (p \lor \neg q) \lor r & \textit{Associative law}\\
+		&\equiv (\neg q \lor p ) \lor r & \textit{Commutative law}\\
+		&\equiv \neg q \lor( p \lor r) & \textit{Associative law}\\
+		&\equiv \neg(\neg q) \rightarrow( p \lor r) & \textit{Table 7, Line 3}\\
+		&\equiv q \rightarrow( p \lor r) & \textit{Double negation law}
+\end{align*}
+
+\vspace{0.5cm}
+Hence; $\neg p \rightarrow (q \rightarrow r)$ is logically equivalent to $q \rightarrow( p \lor r)$.
+
+
+\section*{Answer 3}
+\begin{enumerate}[label=\textbf{\alph*)}]
+	%Everyone likes Burak.
+	\item $\forall x L(x,Burak)$
+
+	%Hazal likes everyone.
+	\item $\forall x L(Hazal, x)$
+
+	%Everyone likes someone.
+	\item $\forall x\exists y L(x,y)$
+
+	%No one likes everyone.
+	\item $\neg\exists x\forall y(L(x,y))$
+
+	%Everyone is liked by someone.
+	\item $\forall x\exists yL(y,x)$
+
+	%No one likes Burak and Mustafa
+	\item $\forall x(\lnot L(x,Mustafa)\land\lnot L(x,Burak))$
+
+	%Ceren likes exactly two people.
+	\item $\exists x\exists y\forall z(L(Ceren, x) \land (L(Ceren,y)
+		\land x\neq y) \land (L(Ceren,z) \rightarrow (z = x \lor z = y)))$
+
+	%There is exactly one person whom everyone likes.
+	\item $\forall x\exists y\forall z(L(x,y) \land (L(x,z) \rightarrow y = z))$
+
+	%No one likes themselves.
+	\item $\forall x\forall y(L(x,y) \rightarrow x \neq y)$
+
+	%There is sb who likes exactly one person besides themselves.
+	\item $\exists x\exists y\forall z(L(x,x) \land L(x,y) \land x \neq y)
+		\land (L(x,z) \rightarrow (z = x \lor z = y))$
+
+\end{enumerate}
+
+
+\section*{Answer 4}
+
+\begin{table}[H]
+	\centering
+		\caption{Proof of  $p\rightarrow q$, $ \neg q$ $\vdash$ $\neg p$. This proof will be refered as \textit{Modus Tollens} or \textit{M.T.} for short.}
+		%\hrule
+		%\noindent\hline{}
+		\vspace{0.5cm}
+	\begin{tabular}{llcll}
+		%& & $p \rightarrow q$, $ \neg q$ $\vdash$ $\neg p$ & & \\
+		$1$ & & $p \rightarrow q$ & \textit{premise}&\\
+		$2$ & & $\neg q$ & \textit{premise} & \\ \cline{2-5}
+		$3$ & \multicolumn{1}{|c}{} & $p$ & \textit{assumption} & \multicolumn{1}{c|}{}\\
+		$4$ & \multicolumn{1}{|c}{} & $q$ & $\rightarrow _e,1,3$ & \multicolumn{1}{c|}{}\\
+		$5$ & \multicolumn{1}{|c}{} & $\bot$ & $\neg _e,2,4$ & \multicolumn{1}{c|}{}\\\cline{2-5}
+		$6$ & & $\neg p$ & $\neg _i,3-5$ &\\
+	\end{tabular}
+	
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Proving that $p, p \rightarrow (r \rightarrow q), q \rightarrow
+	s \vdash \neg q \rightarrow (s \lor \neg r)$}
+	%\hrule
+	\vspace{0.5cm}
+	\begin{tabular}{llcll}
+		$1$ & & $p$ & \textit{premise} &\\
+		$2$ & & $p \rightarrow (r\rightarrow q)$ & \textit{premise} &\\
+		$3$ & & $q\rightarrow s$ & \textit{premise} & \\
+		$4$ & & $r\rightarrow q$ & $\rightarrow _e,1,2$ &\\\cline{2-5}
+		$5$ & \multicolumn{1}{|c}{} & $ \neg q $ & \textit{assumption} & \multicolumn{1}{c|}{}\\
+		$6$ & \multicolumn{1}{|c}{} & $\neg r$ & \textit{M.T.},4,5 & \multicolumn{1}{c|}{}\\
+		$7$ & \multicolumn{1}{|c}{} & $s\lor\neg r $ & $\lor _i,6$ & \multicolumn{1}{c|}{}\\\cline{2-5}
+		$8$ & & $\neg q \rightarrow (s \lor \neg r)$ & $\rightarrow _i,5-7$ &\\
+			
+	\end{tabular}
+\end{table}
+\newpage
+
+
+\section*{Answer 5}
+In this question, we are going to use several theorems that will be proven first, like in the previous question.
+
+\begin{table}[H]
+	\centering
+
+	\begin{tabular}{lllclll}
+		%& & & $\neg p \land \neg q\vdash \neg(p \lor q)$ & & & \\
+		$1$ & & & $\neg p \land \neg q $ & \textit{premise} & &\\
+		$2$ & & & $\neg p$ & $\land _e,1$ & &\\
+		$3$ & & & $\neg q$ & $\land _e,1$ & &\\\cline{2-7}
+		$4$ &\multicolumn{1}{|c}{} & & $p \lor q$ & \textit{assumption} & &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$5$ &\multicolumn{1}{|c}{} & \multicolumn{1}{|c}{}& $p$ & \textit{assumption} &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\
+		$6$ &\multicolumn{1}{|c}{} & \multicolumn{1}{|c}{}& $\bot$ & $\neg _e,2,5$ &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$7$ &\multicolumn{1}{|c}{} & & $p \rightarrow \bot$ & $\rightarrow _i,5-6$ & &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$8$ &\multicolumn{1}{|c}{} & \multicolumn{1}{|c}{}& $q$ & \textit{assumption} &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\
+		$9$ &\multicolumn{1}{|c}{} & \multicolumn{1}{|c}{}& $\bot$ & $\neg _e,3,8$ &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$10$ &\multicolumn{1}{|c}{} & & $q \rightarrow \bot$ & $\rightarrow _i,5-6$ & &\multicolumn{1}{c|}{}\\
+		$11$ &\multicolumn{1}{|c}{} & & $\bot$ & $\lor _e,4,7,10$ & &\multicolumn{1}{c|}{}\\\cline{2-7}
+		$12$ & & & $\neg(p\lor q)$ & $\neg _i,4-11$ & &\\
+		
+	\end{tabular}
+	
+	\caption{De Morgan's Law: $\neg p \land \neg q\vdash \neg(p \lor q)$. Note that we have used $\bot$ to represent the Boolean value \textit{False} in line 7 and 10 to be able to use conjunction elimination in line 11.. This theorem will be refered as $DeM._\lor$.}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{llcll}
+		$1$ & & $p \lor q$ & \textit{premise} &\\
+		$2$ & & $\neg q$ & \textit{premise} & \\\cline{2-5}
+		$3$ & \multicolumn{1}{|c}{} & $\neg p$ & \textit{assumption} & \multicolumn{1}{c|}{}\\
+		$4$ & \multicolumn{1}{|c}{} & $\neg p\land \neg q$ & $\land _i,2,3$ & \multicolumn{1}{c|}{}\\
+		%$5$ & \multicolumn{1}{|c}{} & $\neg(p\lor q)$ & \textit{DeM.,}4& \multicolumn{1}{c|}{}\\
+		$5$ & \multicolumn{1}{|c}{} & $\neg(p\lor q)$ & $DeM._\lor,4$& \multicolumn{1}{c|}{}\\
+		$6$ & \multicolumn{1}{|c}{} & $\bot$ & $\neg _e,1,5$& \multicolumn{1}{c|}{}\\\cline{2-5}
+		$7$ & & $\neg\neg p$ & $\neg _i,3-6$ & \\
+		$8$ & & $p$ & $\neg\neg _e,7$ & \\
+		
+	\end{tabular}
+	\caption{Lemma: $p\lor q, \neg q \vdash p$. This lemma will be refered as Koluacik's rule.}
+	
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllclll}
+		$1$ & & & $\neg\exists xp(x)$ & & &\\\cline{2-7}
+		$2$ & \multicolumn{1}{|c}{} & & $x_0$ & \textit{constant} & &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$3$ & \multicolumn{1}{|c}{} &\multicolumn{1}{|c}{}  & $p(x_0)$ & \textit{assumption} &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\
+		$4$ & \multicolumn{1}{|c}{} &\multicolumn{1}{|c}{}  & $\exists xp(x)$ & $\exists _i,3$&\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\
+		$5$ & \multicolumn{1}{|c}{} &\multicolumn{1}{|c}{}  & $\bot$ & $\neg _e,1,4$ &\multicolumn{1}{c|}{} &\multicolumn{1}{c|}{}\\\cline{3-6}
+		$6$ & \multicolumn{1}{|c}{} & & $\neg p(x_0)$ & $\neg _i,3-5$ & &\multicolumn{1}{c|}{}\\\cline{2-7}
+		$7$ & & & $\forall x\neg p(x)$ & $\forall _i,2-7$ & &\\
+		
+	\end{tabular}
+	\caption{De Morgan's Law for quantifiers. This law will be refered as $DeM._\exists$.}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Proof of $\forall x(p(x) \rightarrow q(x)), \neg\exists zr(z), \exists yp(y) \lor r(a) \vdash \exists zq(z)$.}
+	\vspace{0.5cm}
+	\begin{tabular}{llllcllll}
+		$1$ & & & & $\forall x(p(x) \rightarrow q(x))$ & \textit{premise} & & & \\
+		$2$ & & & & $\neg\exists zr(z)$ & \textit{premise} & & & \\
+		$3$ & & & & $\exists yp(y) \lor r(a)$ & \textit{premise} & & \\
+		$4$ & & & & $\forall z\neg r(z)$ & $DeM._{\exists z},2$  & & & \\
+		$5$ & & & & $\neg r(a)$ & $\forall _{e,z\leftarrow a},4$ & & & \\
+		$6$ & & & & $\exists yp(y)$ & \textit{Koluacik's rule,}$3,5$ & & & \\\cline{2-9}
+		$7$ &\multicolumn{1}{|c}{} &$b$& & $p(b)$ & \textit{assumption} & &&\multicolumn{1}{c|}{} \\
+		$8$ &\multicolumn{1}{|c}{} & & & $p(b)\rightarrow q(b)$ & $\forall _{e, x \leftarrow b},1$ & & &\multicolumn{1}{c|}{} \\
+		$9$ &\multicolumn{1}{|c}{} && & $q(b)$ & $\rightarrow _e, 7,8$ & &&\multicolumn{1}{c|}{} \\
+		$10$ &\multicolumn{1}{|c}{} && & $\exists zq(z)$ & $\exists _i, 9$ & &&\multicolumn{1}{c|}{} \\\cline{2-9}
+		$11$ & & & & $\exists zq(z)$ & $\exists _e,6,7-10$& & & \\
+	\end{tabular}\\
+	\vspace{0.5cm}
+
+	%\textit{$^{(*)}$Notice that we have reached the statement on line 9 solely by working on line 2. We have used the same transformation on line 12. Though the intermediate steps are ommited to avoid repetition, the reader should be aware of the fact that the equivalence was already proven between the lines 4 and 9.}
+	
+\end{table}
+
+
+
+
+
+\end{document}
