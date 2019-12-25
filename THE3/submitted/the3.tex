@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{comment}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Deniz Koluaçık \\
+Id Number : 2310274 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+$x^{p-1} \equiv 1\ (\text{mod } p) $ By using Fermat's Little Theorem \textit{(see p. 281, theorem 3)}. Then $y \leq (p-1)$. 
+By \textit{The Division Theorem II (see p. 239)} There exists a unique pair of $(q,r)$, where $0 \leq r < y$, such that $(p-1) = yq + r$.\\
+
+We can rewrite the given congruence as the following:
+	\begin{align*}
+		1\equiv a^{yq+r} &\equiv (a^y)^qa^r & \text{ (mod $p$)}\\
+		&\equiv 1^qa^r & \text{ (mod $p$)}\\
+		&\equiv a^r & \text{ (mod $p$)}\\
+	\end{align*}
+We have found that $a^r$ must be congruent to $1$ modulo $p$. If $a$ were greater than $0$. Then since $y$ is the smallest positive integer such that $a^y \equiv 1$ (mod $p$), $r \geq y$ would have to be true, which is a contradiction ($ 0 \leq r < y)$. Then $r=0$.\\
+
+Take another look at the equation $(p-1) = yq + r$. $r=0$, then $r \mid (p-1)$.\\
+
+\section*{Answer 2}
+\begin{comment}
+	
+\textit{Foreword: The student is fully aware of the fact that the following approach is not the most elegant one ever, and although it is not explicitly forbidden, the ``brute-force'' method is not appreciated. However they used this method as a last resort after 3 days of hard work and research just for this single question bore no fruit at all.}\\
+%appearently we can not write any explanation on our answers, so this will stay as a comment :)
+\end{comment}
+
+For some $a \in \mathbb{Z^+}$
+\begin{align*}
+	2(a+169)^2 + 10(a+169) - 7 &\equiv 2a^2 + 4(169a) + 169^2 + 10a + 10(169) -7 \text{ (mod $169$)}\\
+	&\equiv 2a^2 + 10a -7\text{ (mod $169$)}\\
+\end{align*}
+
+Appearently for $n=a$, and $n=a+169$, the remainder when $(2n^2+10n-7)$ is divided by $169$ is same. Therefore, if for $n=a$, $169 \nmid (2n^2+10n-7)$, then for $n=a+169$, $169 \nmid (2n^2+10n-7)$, as well. Based on this logic, if we can show that for all $n=a$ such that $1\leq a\leq 169$, $169 \nmid (2a^2+10n-7)$, then we can safely say that $\forall n(169 \nmid (2n^2+10n-7))$.\\
+
+In the following few pages there is a complete table consisting of lines showing that for each value of $n$ in the aforementioned domain, $169 \nmid (2n^2 + 10n -7)$ is true, one by one.\\
+	
+\allowdisplaybreaks
+\begin{align*}
+\text{for $n = 1 $}&& (2n^2+10n-7) &= 5 & \text{Since } 5  &\equiv  5 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 2 $}&& (2n^2+10n-7) &= 21 & \text{Since } 21  &\equiv  21 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 3 $}&& (2n^2+10n-7) &= 41 & \text{Since } 41  &\equiv  41 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 4 $}&& (2n^2+10n-7) &= 65 & \text{Since } 65  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 5 $}&& (2n^2+10n-7) &= 93 & \text{Since } 93  &\equiv  93 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 6 $}&& (2n^2+10n-7) &= 125 & \text{Since } 125  &\equiv  125 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 7 $}&& (2n^2+10n-7) &= 161 & \text{Since } 161  &\equiv  161 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 8 $}&& (2n^2+10n-7) &= 201 & \text{Since } 201  &\equiv  32 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 9 $}&& (2n^2+10n-7) &= 245 & \text{Since } 245  &\equiv  76 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 10 $}&& (2n^2+10n-7) &= 293 & \text{Since } 293  &\equiv  124 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 11 $}&& (2n^2+10n-7) &= 345 & \text{Since } 345  &\equiv  7 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 12 $}&& (2n^2+10n-7) &= 401 & \text{Since } 401  &\equiv  63 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 13 $}&& (2n^2+10n-7) &= 461 & \text{Since } 461  &\equiv  123 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 14 $}&& (2n^2+10n-7) &= 525 & \text{Since } 525  &\equiv  18 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 15 $}&& (2n^2+10n-7) &= 593 & \text{Since } 593  &\equiv  86 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 16 $}&& (2n^2+10n-7) &= 665 & \text{Since } 665  &\equiv  158 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 17 $}&& (2n^2+10n-7) &= 741 & \text{Since } 741  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 18 $}&& (2n^2+10n-7) &= 821 & \text{Since } 821  &\equiv  145 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 19 $}&& (2n^2+10n-7) &= 905 & \text{Since } 905  &\equiv  60 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 20 $}&& (2n^2+10n-7) &= 993 & \text{Since } 993  &\equiv  148 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 21 $}&& (2n^2+10n-7) &= 1085 & \text{Since } 1085  &\equiv  71 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 22 $}&& (2n^2+10n-7) &= 1181 & \text{Since } 1181  &\equiv  167 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 23 $}&& (2n^2+10n-7) &= 1281 & \text{Since } 1281  &\equiv  98 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 24 $}&& (2n^2+10n-7) &= 1385 & \text{Since } 1385  &\equiv  33 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 25 $}&& (2n^2+10n-7) &= 1493 & \text{Since } 1493  &\equiv  141 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 26 $}&& (2n^2+10n-7) &= 1605 & \text{Since } 1605  &\equiv  84 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 27 $}&& (2n^2+10n-7) &= 1721 & \text{Since } 1721  &\equiv  31 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 28 $}&& (2n^2+10n-7) &= 1841 & \text{Since } 1841  &\equiv  151 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 29 $}&& (2n^2+10n-7) &= 1965 & \text{Since } 1965  &\equiv  106 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 30 $}&& (2n^2+10n-7) &= 2093 & \text{Since } 2093  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 31 $}&& (2n^2+10n-7) &= 2225 & \text{Since } 2225  &\equiv  28 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 32 $}&& (2n^2+10n-7) &= 2361 & \text{Since } 2361  &\equiv  164 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 33 $}&& (2n^2+10n-7) &= 2501 & \text{Since } 2501  &\equiv  135 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 34 $}&& (2n^2+10n-7) &= 2645 & \text{Since } 2645  &\equiv  110 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 35 $}&& (2n^2+10n-7) &= 2793 & \text{Since } 2793  &\equiv  89 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 36 $}&& (2n^2+10n-7) &= 2945 & \text{Since } 2945  &\equiv  72 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 37 $}&& (2n^2+10n-7) &= 3101 & \text{Since } 3101  &\equiv  59 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 38 $}&& (2n^2+10n-7) &= 3261 & \text{Since } 3261  &\equiv  50 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 39 $}&& (2n^2+10n-7) &= 3425 & \text{Since } 3425  &\equiv  45 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 40 $}&& (2n^2+10n-7) &= 3593 & \text{Since } 3593  &\equiv  44 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 41 $}&& (2n^2+10n-7) &= 3765 & \text{Since } 3765  &\equiv  47 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 42 $}&& (2n^2+10n-7) &= 3941 & \text{Since } 3941  &\equiv  54 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 43 $}&& (2n^2+10n-7) &= 4121 & \text{Since } 4121  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 44 $}&& (2n^2+10n-7) &= 4305 & \text{Since } 4305  &\equiv  80 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 45 $}&& (2n^2+10n-7) &= 4493 & \text{Since } 4493  &\equiv  99 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 46 $}&& (2n^2+10n-7) &= 4685 & \text{Since } 4685  &\equiv  122 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 47 $}&& (2n^2+10n-7) &= 4881 & \text{Since } 4881  &\equiv  149 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 48 $}&& (2n^2+10n-7) &= 5081 & \text{Since } 5081  &\equiv  11 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 49 $}&& (2n^2+10n-7) &= 5285 & \text{Since } 5285  &\equiv  46 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 50 $}&& (2n^2+10n-7) &= 5493 & \text{Since } 5493  &\equiv  85 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 51 $}&& (2n^2+10n-7) &= 5705 & \text{Since } 5705  &\equiv  128 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 52 $}&& (2n^2+10n-7) &= 5921 & \text{Since } 5921  &\equiv  6 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 53 $}&& (2n^2+10n-7) &= 6141 & \text{Since } 6141  &\equiv  57 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 54 $}&& (2n^2+10n-7) &= 6365 & \text{Since } 6365  &\equiv  112 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 55 $}&& (2n^2+10n-7) &= 6593 & \text{Since } 6593  &\equiv  2 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 56 $}&& (2n^2+10n-7) &= 6825 & \text{Since } 6825  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 57 $}&& (2n^2+10n-7) &= 7061 & \text{Since } 7061  &\equiv  132 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 58 $}&& (2n^2+10n-7) &= 7301 & \text{Since } 7301  &\equiv  34 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 59 $}&& (2n^2+10n-7) &= 7545 & \text{Since } 7545  &\equiv  109 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 60 $}&& (2n^2+10n-7) &= 7793 & \text{Since } 7793  &\equiv  19 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 61 $}&& (2n^2+10n-7) &= 8045 & \text{Since } 8045  &\equiv  102 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 62 $}&& (2n^2+10n-7) &= 8301 & \text{Since } 8301  &\equiv  20 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 63 $}&& (2n^2+10n-7) &= 8561 & \text{Since } 8561  &\equiv  111 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 64 $}&& (2n^2+10n-7) &= 8825 & \text{Since } 8825  &\equiv  37 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 65 $}&& (2n^2+10n-7) &= 9093 & \text{Since } 9093  &\equiv  136 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 66 $}&& (2n^2+10n-7) &= 9365 & \text{Since } 9365  &\equiv  70 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 67 $}&& (2n^2+10n-7) &= 9641 & \text{Since } 9641  &\equiv  8 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 68 $}&& (2n^2+10n-7) &= 9921 & \text{Since } 9921  &\equiv  119 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 69 $}&& (2n^2+10n-7) &= 10205 & \text{Since } 10205  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 70 $}&& (2n^2+10n-7) &= 10493 & \text{Since } 10493  &\equiv  15 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 71 $}&& (2n^2+10n-7) &= 10785 & \text{Since } 10785  &\equiv  138 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 72 $}&& (2n^2+10n-7) &= 11081 & \text{Since } 11081  &\equiv  96 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 73 $}&& (2n^2+10n-7) &= 11381 & \text{Since } 11381  &\equiv  58 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 74 $}&& (2n^2+10n-7) &= 11685 & \text{Since } 11685  &\equiv  24 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 75 $}&& (2n^2+10n-7) &= 11993 & \text{Since } 11993  &\equiv  163 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 76 $}&& (2n^2+10n-7) &= 12305 & \text{Since } 12305  &\equiv  137 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 77 $}&& (2n^2+10n-7) &= 12621 & \text{Since } 12621  &\equiv  115 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 78 $}&& (2n^2+10n-7) &= 12941 & \text{Since } 12941  &\equiv  97 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 79 $}&& (2n^2+10n-7) &= 13265 & \text{Since } 13265  &\equiv  83 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 80 $}&& (2n^2+10n-7) &= 13593 & \text{Since } 13593  &\equiv  73 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 81 $}&& (2n^2+10n-7) &= 13925 & \text{Since } 13925  &\equiv  67 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 82 $}&& (2n^2+10n-7) &= 14261 & \text{Since } 14261  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 83 $}&& (2n^2+10n-7) &= 14601 & \text{Since } 14601  &\equiv  67 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 84 $}&& (2n^2+10n-7) &= 14945 & \text{Since } 14945  &\equiv  73 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 85 $}&& (2n^2+10n-7) &= 15293 & \text{Since } 15293  &\equiv  83 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 86 $}&& (2n^2+10n-7) &= 15645 & \text{Since } 15645  &\equiv  97 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 87 $}&& (2n^2+10n-7) &= 16001 & \text{Since } 16001  &\equiv  115 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 88 $}&& (2n^2+10n-7) &= 16361 & \text{Since } 16361  &\equiv  137 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 89 $}&& (2n^2+10n-7) &= 16725 & \text{Since } 16725  &\equiv  163 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 90 $}&& (2n^2+10n-7) &= 17093 & \text{Since } 17093  &\equiv  24 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 91 $}&& (2n^2+10n-7) &= 17465 & \text{Since } 17465  &\equiv  58 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 92 $}&& (2n^2+10n-7) &= 17841 & \text{Since } 17841  &\equiv  96 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 93 $}&& (2n^2+10n-7) &= 18221 & \text{Since } 18221  &\equiv  138 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 94 $}&& (2n^2+10n-7) &= 18605 & \text{Since } 18605  &\equiv  15 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 95 $}&& (2n^2+10n-7) &= 18993 & \text{Since } 18993  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 96 $}&& (2n^2+10n-7) &= 19385 & \text{Since } 19385  &\equiv  119 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 97 $}&& (2n^2+10n-7) &= 19781 & \text{Since } 19781  &\equiv  8 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 98 $}&& (2n^2+10n-7) &= 20181 & \text{Since } 20181  &\equiv  70 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 99 $}&& (2n^2+10n-7) &= 20585 & \text{Since } 20585  &\equiv  136 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 100 $}&& (2n^2+10n-7) &= 20993 & \text{Since } 20993  &\equiv  37 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 101 $}&& (2n^2+10n-7) &= 21405 & \text{Since } 21405  &\equiv  111 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 102 $}&& (2n^2+10n-7) &= 21821 & \text{Since } 21821  &\equiv  20 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 103 $}&& (2n^2+10n-7) &= 22241 & \text{Since } 22241  &\equiv  102 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 104 $}&& (2n^2+10n-7) &= 22665 & \text{Since } 22665  &\equiv  19 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 105 $}&& (2n^2+10n-7) &= 23093 & \text{Since } 23093  &\equiv  109 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 106 $}&& (2n^2+10n-7) &= 23525 & \text{Since } 23525  &\equiv  34 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 107 $}&& (2n^2+10n-7) &= 23961 & \text{Since } 23961  &\equiv  132 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 108 $}&& (2n^2+10n-7) &= 24401 & \text{Since } 24401  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 109 $}&& (2n^2+10n-7) &= 24845 & \text{Since } 24845  &\equiv  2 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 110 $}&& (2n^2+10n-7) &= 25293 & \text{Since } 25293  &\equiv  112 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 111 $}&& (2n^2+10n-7) &= 25745 & \text{Since } 25745  &\equiv  57 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 112 $}&& (2n^2+10n-7) &= 26201 & \text{Since } 26201  &\equiv  6 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 113 $}&& (2n^2+10n-7) &= 26661 & \text{Since } 26661  &\equiv  128 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 114 $}&& (2n^2+10n-7) &= 27125 & \text{Since } 27125  &\equiv  85 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 115 $}&& (2n^2+10n-7) &= 27593 & \text{Since } 27593  &\equiv  46 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 116 $}&& (2n^2+10n-7) &= 28065 & \text{Since } 28065  &\equiv  11 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 117 $}&& (2n^2+10n-7) &= 28541 & \text{Since } 28541  &\equiv  149 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 118 $}&& (2n^2+10n-7) &= 29021 & \text{Since } 29021  &\equiv  122 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 119 $}&& (2n^2+10n-7) &= 29505 & \text{Since } 29505  &\equiv  99 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 120 $}&& (2n^2+10n-7) &= 29993 & \text{Since } 29993  &\equiv  80 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 121 $}&& (2n^2+10n-7) &= 30485 & \text{Since } 30485  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 122 $}&& (2n^2+10n-7) &= 30981 & \text{Since } 30981  &\equiv  54 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 123 $}&& (2n^2+10n-7) &= 31481 & \text{Since } 31481  &\equiv  47 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 124 $}&& (2n^2+10n-7) &= 31985 & \text{Since } 31985  &\equiv  44 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 125 $}&& (2n^2+10n-7) &= 32493 & \text{Since } 32493  &\equiv  45 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 126 $}&& (2n^2+10n-7) &= 33005 & \text{Since } 33005  &\equiv  50 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 127 $}&& (2n^2+10n-7) &= 33521 & \text{Since } 33521  &\equiv  59 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 128 $}&& (2n^2+10n-7) &= 34041 & \text{Since } 34041  &\equiv  72 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 129 $}&& (2n^2+10n-7) &= 34565 & \text{Since } 34565  &\equiv  89 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 130 $}&& (2n^2+10n-7) &= 35093 & \text{Since } 35093  &\equiv  110 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 131 $}&& (2n^2+10n-7) &= 35625 & \text{Since } 35625  &\equiv  135 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 132 $}&& (2n^2+10n-7) &= 36161 & \text{Since } 36161  &\equiv  164 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 133 $}&& (2n^2+10n-7) &= 36701 & \text{Since } 36701  &\equiv  28 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 134 $}&& (2n^2+10n-7) &= 37245 & \text{Since } 37245  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 135 $}&& (2n^2+10n-7) &= 37793 & \text{Since } 37793  &\equiv  106 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 136 $}&& (2n^2+10n-7) &= 38345 & \text{Since } 38345  &\equiv  151 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 137 $}&& (2n^2+10n-7) &= 38901 & \text{Since } 38901  &\equiv  31 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 138 $}&& (2n^2+10n-7) &= 39461 & \text{Since } 39461  &\equiv  84 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 139 $}&& (2n^2+10n-7) &= 40025 & \text{Since } 40025  &\equiv  141 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 140 $}&& (2n^2+10n-7) &= 40593 & \text{Since } 40593  &\equiv  33 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 141 $}&& (2n^2+10n-7) &= 41165 & \text{Since } 41165  &\equiv  98 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 142 $}&& (2n^2+10n-7) &= 41741 & \text{Since } 41741  &\equiv  167 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 143 $}&& (2n^2+10n-7) &= 42321 & \text{Since } 42321  &\equiv  71 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 144 $}&& (2n^2+10n-7) &= 42905 & \text{Since } 42905  &\equiv  148 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 145 $}&& (2n^2+10n-7) &= 43493 & \text{Since } 43493  &\equiv  60 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 146 $}&& (2n^2+10n-7) &= 44085 & \text{Since } 44085  &\equiv  145 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 147 $}&& (2n^2+10n-7) &= 44681 & \text{Since } 44681  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 148 $}&& (2n^2+10n-7) &= 45281 & \text{Since } 45281  &\equiv  158 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 149 $}&& (2n^2+10n-7) &= 45885 & \text{Since } 45885  &\equiv  86 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 150 $}&& (2n^2+10n-7) &= 46493 & \text{Since } 46493  &\equiv  18 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 151 $}&& (2n^2+10n-7) &= 47105 & \text{Since } 47105  &\equiv  123 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 152 $}&& (2n^2+10n-7) &= 47721 & \text{Since } 47721  &\equiv  63 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 153 $}&& (2n^2+10n-7) &= 48341 & \text{Since } 48341  &\equiv  7 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 154 $}&& (2n^2+10n-7) &= 48965 & \text{Since } 48965  &\equiv  124 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 155 $}&& (2n^2+10n-7) &= 49593 & \text{Since } 49593  &\equiv  76 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 156 $}&& (2n^2+10n-7) &= 50225 & \text{Since } 50225  &\equiv  32 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 157 $}&& (2n^2+10n-7) &= 50861 & \text{Since } 50861  &\equiv  161 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 158 $}&& (2n^2+10n-7) &= 51501 & \text{Since } 51501  &\equiv  125 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 159 $}&& (2n^2+10n-7) &= 52145 & \text{Since } 52145  &\equiv  93 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 160 $}&& (2n^2+10n-7) &= 52793 & \text{Since } 52793  &\equiv  65 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 161 $}&& (2n^2+10n-7) &= 53445 & \text{Since } 53445  &\equiv  41 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 162 $}&& (2n^2+10n-7) &= 54101 & \text{Since } 54101  &\equiv  21 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 163 $}&& (2n^2+10n-7) &= 54761 & \text{Since } 54761  &\equiv  5 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 164 $}&& (2n^2+10n-7) &= 55425 & \text{Since } 55425  &\equiv  162 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 165 $}&& (2n^2+10n-7) &= 56093 & \text{Since } 56093  &\equiv  154 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 166 $}&& (2n^2+10n-7) &= 56765 & \text{Since } 56765  &\equiv  150 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 167 $}&& (2n^2+10n-7) &= 57441 & \text{Since } 57441  &\equiv  150 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 168 $}&& (2n^2+10n-7) &= 58121 & \text{Since } 58121  &\equiv  154 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\text{for $n = 169 $}&& (2n^2+10n-7) &= 58805 & \text{Since } 58805  &\equiv  162 \text{ (mod $169$)}&& 169 \nmid (2n^2+10n-7)\\
+\end{align*}
+
+We have shown that for all values of $n$ from $1$ to $169$, $169 \nmid (2n^2 + 10n -7)$. We can conclude by stating that $160 \nmid (2n^2 + 10n -7), \forall n \in \mathbb{Z^+}$.
+
+\newpage
+\section*{Answer 3}
+
+\begin{align}
+	(a-b) &\equiv 0\text{ (mod $n$)}\\
+	(a-b) &\equiv 0\text{ (mod $m$)}
+\end{align}
+
+
+Let the prime factorization of $n$ and $m$ be $\{n_1 \times n_2 \times \mathellipsis \times n_i\}$ and $\{m_1 \times m_2 \times \mathellipsis \times m_i\}$, respectively, where for all $x$ and $y$, $n_x \neq m_y$, since $\gcd(n,m) = 1$. By (1), and (2), we can say that $n \mid (a-b)$, and $m \mid (a-b)$. Therefore, the prime factorization of $(a-b)$ includes all the elements from the prime factorizations of both $m$ and $n$. Hence, $(m \times n) \mid (a-b)$, and finally,
+\begin{align*}
+	(a-b) &\equiv 0 \text{ (mod $m\times n$)}\\
+	a &\equiv b \text{ (mod $m\times n$)}
+\end{align*}
+
+\newpage
+
+\section*{Answer 4}
+
+We will use induction for $n$:
+\begin{enumerate}
+	\item Base case ($n=1$): \[\sum_{j=1}^1j(j+1)\mathellipsis(j+k-1) = 1 \times 2 \times \mathellipsis \times k = \frac{1 \times 2 \times \mathellipsis \times k \times (k+1)}{k+1}\]
+	\item Inductive Hypothesis:\[\sum_{j=1}^nj(j+1)\mathellipsis(j+k-1) = \frac{n (n+1) \mathellipsis (n+k)}{k+1}\]
+	\item Show that the following is true:\[\sum_{j=1}^{n+1}j(j+1)\mathellipsis(j+k-1) = \frac{(n+1)(n+2) \mathellipsis (n+k+1)}{k+1}\] 
+	\begin{align*}
+		\sum_{j=1}^{n+1}j(j+1)\mathellipsis(j+k-1) &= \sum_{j=1}^{n}j(j+1)\mathellipsis(j+k-1)+ (n+1)(n+2)\mathellipsis(n+k)\\
+		&= \frac{n(n+1)\mathellipsis(n+k)}{k+1} + (n+1)(n+2)\mathellipsis(n+k)\\
+		&= \left(\frac{n}{k+1} + 1\right)(n+1)(n+2)\mathellipsis(n+k)\\
+		&= \frac{(n+1)(n+2)\mathellipsis(n+k)(n+k+1)}{k+1}\\
+	\end{align*}
+	Hence, by mathematical induction \[\sum_{j=1}^nj(j+1)\mathellipsis(j+k-1) = \frac{n (n+1) \mathellipsis (n+k)}{k+1}\]
+
+		%\[\sum_{j=1}^{n+1}j(j+1)\mathellipsis(j+k-1)= \sum_{j=1}^{n}j(j+1)\mathellipsis(j+k-1)+ (n+1)(n+2)\mathellipsis(n+k)\]
+	
+\end{enumerate}
+
+\newpage
+\section*{Answer 5}
+
+\begin{enumerate}
+	\item Show that $H_n \leq 7^n$ for $n=0,n=1,n=2,n=3$.
+		\begin{itemize}
+			\item $H_0 = 1 \leq 7^0$
+			\item $H_1 = 3 \leq 7^1$
+			\item $H_2 = 5 \leq 7^2$
+			\item $H_3 = 103 \leq 7^3$
+		\end{itemize}
+	\item We construct our inductive hypothesis, assume that $H_i \leq 7^i$ is true for $3 \leq i \leq n$.
+	\item Now, we need to show that $H_{n+1} \leq 7^{n+1}$ where $H_{n+1} = 5H_{n-1} + 5H_{n-2} + 63H_{n-3}$.
+	\begin{align*}
+		H_{n+1} &= 5H_{n-1} + 5H_{n-2} + 63H_{n-3}\\
+			&\leq 5\times 7^n + \frac{5}{7}\times 7^n + \frac{9}{7}\times 7^n \\
+			&= 7\times 7^n = 7^{n+1}\\
+	\end{align*}
+		We have shown that $H_{n+1} \leq 7^{n+1}$. Hence, by strong induction, $H_n \leq 7^n$ for all $n \geq 0$.\\
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
