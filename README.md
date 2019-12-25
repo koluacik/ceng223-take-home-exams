@@ -1,1 +1,1 @@
-Repository for Take Home Exams of the CENG223, that i am currently taking.
+Repository for take of exams (homeworks) of the Discrete Computational Structures course i am currently taking.
